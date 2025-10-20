@@ -86,22 +86,26 @@ Ele garante que:
 ## 🧩 Diagramas UML
 
 ### 1️⃣ Diagrama de Caso de Uso
-<img width="600px" src="/imagens/Diagrama-1.drawio.png"/>
+<img width="600px" height="600px" src="Imagens/Diagrama-1.drawio.png"/>
+
 
 ---
 
 ### 2️⃣ Diagrama de Classes e de Pacotes
-<img width="600px" src="/imagens/Diagrama-2.drawio.png"/>
+<img width="600px" height="600px" src="Imagens/Diagrama-2.drawio.png"/>
+
 
 ---
 
 ### 3️⃣ Diagrama de Componentes
-<img width="600px" src="/imagens/Diagrama-3.drawio.png"/>
+<img width="600px" height="600px" src="Imagens/Diagrama-3.drawio.png"/>
+
 
 ---
 
 ### 4️⃣ Diagrama de Implantação
-<img width="600px" src="/imagens/Diagrama-4.drawio.png"/>
+<img width="600px" height="600px" src="Imagens/Diagrama-4.drawio.png"/>
+
 
 ---
 
