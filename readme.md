@@ -11,14 +11,6 @@ Ele garante que:
 
 ---
 
-## ⚙️ Funcionalidades Principais
-- Cadastro de Competições  
-- Inscrição de Atletas  
-- Alocação de Locais  
-- Registro de Resultados  
-- Geração de Relatórios de Medalhas  
-
----
 
 ## 👥 Histórias de Usuário
 
