@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Página-1" id="uEzSRYr_3XUWw1vCAYCt">
+    <mxGraphModel dx="1426" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node_user" value="&lt;&lt;device&gt;&gt;&#xa;Dispositivo do Usuário&#xa;&#xa;- Navegador Web&#xa;- Aplicativo Mobile" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;strokeColor=#007acc;" parent="1" vertex="1">
+          <mxGeometry x="60" y="220" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="node_web" value="&lt;&lt;server&gt;&gt;&#xa;Servidor Web (Aplicação SGO)&#xa;&#xa;- Interface de Usuário&#xa;- Módulo de Inscrições&#xa;- Módulo de Alocação&#xa;- Módulo de Relatórios&#xa;- Módulo de Competição" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbe6;strokeColor=#ffb300;" parent="1" vertex="1">
+          <mxGeometry x="400" y="160" width="320" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="node_db" value="&lt;&lt;server&gt;&gt;&#xa;Servidor de Banco de Dados&#xa;&#xa;- Banco de Dados SQL&#xa;- Tabelas: atletas, competições, locais, resultados, países" style="shape=cylinder3;whiteSpace=wrap;html=1;rounded=1;fillColor=#eeeeee;strokeColor=#999999;" parent="1" vertex="1">
+          <mxGeometry x="800" y="200" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="node_network" value="&lt;&lt;network&gt;&gt;&#xa;Internet / Rede Segura" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="370" y="460" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" value="HTTP/HTTPS" style="endArrow=open;html=1;strokeWidth=1.5;labelBackgroundColor=#ffffff;" parent="1" source="node_user" target="node_web" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" value="JDBC / SQL" style="endArrow=open;html=1;strokeWidth=1.5;labelBackgroundColor=#ffffff;" parent="1" source="node_web" target="node_db" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" value="Rede interna segura (VPN)" style="endArrow=open;dashed=1;html=1;strokeWidth=1.2;" parent="1" source="node_web" target="node_network" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

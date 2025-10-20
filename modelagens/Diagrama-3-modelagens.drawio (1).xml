@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Página-1" id="uEzSRYr_3XUWw1vCAYCt">
+    <mxGraphModel dx="1426" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pkg_model" value="model" style="swimlane;childLayout=stackLayout;horizontal=1;rounded=1;fillColor=#f5f5f5;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="60" y="60" width="500" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_pais" value="País&#xa;- nome: String&#xa;- codigo: String" style="shape=rectangle;whiteSpace=wrap;html=1;rounded=1;strokeColor=#000000;fillColor=#ffffff;" parent="pkg_model" vertex="1">
+          <mxGeometry x="20" y="40" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_atleta" value="Atleta&#xa;- nome: String&#xa;- idade: int&#xa;- pais: País" style="shape=rectangle;whiteSpace=wrap;html=1;rounded=1;strokeColor=#000000;fillColor=#ffffff;" parent="pkg_model" vertex="1">
+          <mxGeometry x="20" y="150" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_local" value="Local&#xa;- nome: String&#xa;- capacidade: int&#xa;- endereco: String" style="shape=rectangle;whiteSpace=wrap;html=1;rounded=1;strokeColor=#000000;fillColor=#ffffff;" parent="pkg_model" vertex="1">
+          <mxGeometry x="20" y="280" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_competicao" value="Competição&#xa;- nomeModalidade: String&#xa;- data: Date&#xa;- horario: String&#xa;- local: Local&#xa;- atletas: List&lt;Atleta&gt;" style="shape=rectangle;whiteSpace=wrap;html=1;rounded=1;strokeColor=#000000;fillColor=#ffffff;" parent="pkg_model" vertex="1">
+          <mxGeometry x="260" y="60" width="230" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_resultado" value="Resultado&#xa;- ouro: Atleta&#xa;- prata: Atleta&#xa;- bronze: Atleta" style="shape=rectangle;whiteSpace=wrap;html=1;rounded=1;strokeColor=#000000;fillColor=#ffffff;" parent="pkg_model" vertex="1">
+          <mxGeometry x="260" y="240" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_service" value="service" style="swimlane;childLayout=stackLayout;horizontal=1;rounded=1;fillColor=#f5f5f5;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="640" y="60" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_ger_comp" value="GerenciadorCompeticao&#xa;+ cadastrarCompeticao()&#xa;+ inscreverAtleta()&#xa;+ alocarLocal()&#xa;+ registrarResultado()" style="shape=rectangle;whiteSpace=wrap;html=1;rounded=1;strokeColor=#000000;fillColor=#ffffff;" parent="pkg_service" vertex="1">
+          <mxGeometry y="23" width="260" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_report" value="report" style="swimlane;childLayout=stackLayout;horizontal=1;rounded=1;fillColor=#f5f5f5;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="640" y="400" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_relatorio" value="GeradorRelatorioMedalhas&#xa;+ gerarRelatorioPorPais()&#xa;+ exibirRanking()" style="shape=rectangle;whiteSpace=wrap;html=1;rounded=1;strokeColor=#000000;fillColor=#ffffff;" parent="pkg_report" vertex="1">
+          <mxGeometry y="23" width="260" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" style="endArrow=open;html=1;strokeWidth=1.5;dashed=0;" parent="1" source="cls_atleta" target="cls_pais" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" style="endArrow=open;html=1;strokeWidth=1.5;" parent="1" source="cls_competicao" target="cls_local" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" style="endArrow=open;html=1;strokeWidth=1.5;" parent="1" source="cls_competicao" target="cls_atleta" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" style="endArrow=open;html=1;strokeWidth=1.5;" parent="1" source="cls_resultado" target="cls_competicao" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" value="usa" style="endArrow=open;dashed=1;html=1;strokeWidth=1.2;labelBackgroundColor=#ffffff;" parent="1" source="cls_ger_comp" target="cls_competicao" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" value="gera" style="endArrow=open;dashed=1;html=1;strokeWidth=1.2;labelBackgroundColor=#ffffff;" parent="1" source="cls_relatorio" target="cls_resultado" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
