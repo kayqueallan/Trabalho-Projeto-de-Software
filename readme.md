@@ -11,9 +11,6 @@ Ele garante que:
 
 ---
 
-
-## 👥 Histórias de Usuário
-
 ## 👥 Histórias de Usuário
 
 ### **US01 - Cadastrar Competição**
